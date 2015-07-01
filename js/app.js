@@ -121,30 +121,30 @@ $(document).ready(function(){
 
 	/* Hot or Cold */
 
-	function hotorCold(guessDifference) {
+	function hotorCold(guessProximity) {
 
-		if (guessDifference == 0) {
+		if (guessProximity == 0) {
 			setFeedback("Bravo! You guessed it!");
 			found = true;
 			return false;
 		}
-		else if (guessDifference <= 5) {
+		else if (guessProximity <= 5) {
 			setFeedback("YOU'RE ON FIRE!");
 			return true;
 		}
-		else if (guessDifference <= 10){
+		else if (guessProximity <= 10){
 			setFeedback("Getting Hot!");
 			return true;
 		}
-		else if (guessDifference>=10 && guessDifference <= 20) {
+		else if (guessProximity>=10 && guessProximity <= 20) {
 			setFeedback("Getting warmer...");
 			return true;
 		}
-		else if (guessDifference>=20 && guessDifference <= 30) {
+		else if (guessProximity>=20 && guessProximity <= 30) {
 			setFeedback("Getting cold...");
 			return true;
 		}
-		else if (guessDifference>=30 && guessDifference <= 40) {
+		else if (guessProximity>=30 && guessProximity <= 40) {
 			setFeedback("Getting Icy!");
 			return true;
 		}
